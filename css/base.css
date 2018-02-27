@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+}
+header {
+  text-align: center;
+  background-color: #d6e4f0;
+}
+main {
+  background-color: #ecf0f3;
+}
+.sidebar {
+  background-color: #acc9de;
+}
+footer {
+  text-align: center;
+  background-color: #b9d5ed;
+}
+header,
+main,
+.sidebar,
+footer {
+  box-sizing: border-box;
+  padding: 30px;
+}
+.list-inline li {
+  display: inline-block;
+}

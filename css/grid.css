@@ -1,0 +1,67 @@
+/* standard grid */
+.grid {
+  min-height: 100vh;
+  display: grid;
+}
+.grid header {
+  /*grid-column-start: 2;*/
+  /*grid-column-end: span 3;*/
+  /*grid-row-start: 1;*/
+  grid-area: header;
+}
+.grid .sidebar {
+  grid-area: sidebar;
+}
+.grid main {
+  /*grid-column-start: 2;*/
+  /*grid-column-end: span 3;*/
+  /*grid-row-start: 2;*/
+  grid-area: main;
+}
+.grid footer {
+  /*grid-column-start: 2;*/
+  /*grid-column-end: span 3;*/
+  /*grid-row-start: 3;*/
+  grid-area: footer;
+}
+
+/* 1st grid layout */
+.grid--1 {
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header header header"
+    "main main main main main"
+    "footer footer footer footer footer";
+  /*grid-column-gap: 10px;*/
+  /*grid-row-gap: 10px;*/
+  /*grid-gap: 10px 10px;*/
+}
+
+/* grid with sidebar */
+.grid--secondarySidebar {
+  /*grid-template: 100px 1fr 100px / repeat(5, 20%);*/
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header header header"
+    "sidebar main main main main"
+    "footer footer footer footer footer";
+}
+
+/* grid with the header as the sidebar*/
+.grid--headerSidebar {
+  grid-template: repeat(12, auto) / repeat(12, 1fr);
+}
+.grid--headerSidebar header {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 12;
+}
+.grid--headerSidebar main {
+  grid-column: 5 / -1;
+  grid-row: 1 / span 11;
+}
+.grid--headerSidebar footer {
+  grid-column: 1 / span 12;
+  grid-row: -2;
+}
